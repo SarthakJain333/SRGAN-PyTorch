@@ -21,3 +21,6 @@ I trained on only 1000 images and you can get that custom dataset here : https:/
 
 Use 'making_lr_img.py' to create your own custom dataset of Low Resolution images. I foud it easy as compared to do it in transforms.Compose() of 
 torchvision, but it's upto you.
+
+Use 'pytorch_prediction.py' to get predicted image from the trained model. Don't forget to add the weights of your trained model in torch.load()
+and the weights must be of generator only (we don't require discrimintor here, it's role is over as it was only required to improve the predictions of generator model so that generator can produce something desirable and not just random noise)
