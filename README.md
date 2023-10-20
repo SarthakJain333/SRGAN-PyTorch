@@ -6,6 +6,9 @@ References :
 2. https://www.kaggle.com/code/balraj98/single-image-super-resolution-gan-srgan-pytorch/notebook
 3. https://www.kaggle.com/code/luizclaudioandrade/srgan-pytorch-lightning
 4. https://pytorch.org/tutorials/beginner/
+5. https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/GANs
+6. https://www.youtube.com/playlist?list=PLhhyoLH6IjfwIp8bZnzX8QR30TRcHO8Va
+7. https://paperswithcode.com/
 
 Concepts involved :
 Residual Connections, Generative Adversarial Networks(GANs), Perceptual Loss
