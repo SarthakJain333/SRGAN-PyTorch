@@ -1,5 +1,6 @@
 # SRGAN-PyTorch
 Paper Link : https://arxiv.org/pdf/1609.04802.pdf
+
 References : 
 1. https://github.com/sgrvinod/Deep-Tutorials-for-PyTorch
 2. https://www.kaggle.com/code/balraj98/single-image-super-resolution-gan-srgan-pytorch/notebook
