@@ -26,3 +26,5 @@ Use 'pytorch_prediction.py' to get predicted image from the trained model. Don't
 and the weights must be of generator only (we don't require discriminator here, it's role is over as it was only required to improve the predictions of generator model so that generator can produce something desirable and not just random noise).
 
 Use 'after_predictions.py' to visualize the predicted/generated image.
+
+Use 'gradio_interface.py' to get a nice UI Interface for the model. After cloning the repo into your local machine or copying the files, run : gradio gradio_interface.py to see the nice UI on your local host.
