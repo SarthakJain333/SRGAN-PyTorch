@@ -62,6 +62,8 @@ class GeneratorResNet(nn.Module):
 generator = GeneratorResNet()
 # change the map_location if you're GPU rich ;-)
 generator.load_state_dict(torch.load('generator.pth', map_location=torch.device('cpu')))
+# https://stackoverflow.com/questions/60018578/what-does-model-eval-do-in-pytorch
+generator.eval() 
 # change the image path 
 image = Image.open('lr_imgs/002170.jpg')
 image = image.convert('RGB')
