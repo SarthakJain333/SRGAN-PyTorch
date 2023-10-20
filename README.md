@@ -18,3 +18,6 @@ Note : This Model was trained on a small subset of CelebA Dataset(you can get th
 A GAN type model is trained to convert low resolution images into high resolution. The high resolution images are used as taregts to train the Generator and as inputs for the Discriminator of SRGAN Model respectively. Low resolution versions of the high resolution images are produced by bicubic downsampling, and they are input to the Generator of SRGAN Model.
 
 I trained on only 1000 images and you can get that custom dataset here : https://tinyurl.com/2xfe8u6j
+
+Use 'making_lr_img.py' to create your own custom dataset of Low Resolution images. I foud it easy as compared to do it in transforms.Compose() of 
+torchvision, but it's upto you.
