@@ -73,9 +73,9 @@ image = image / 255.0
 
 # Pass the preprocessed image to the model.
 predictions = generator(image.unsqueeze(0))
-predictions *= 255.0
+
 print(predictions)
 
 print(predictions.size())
 
-save_image(predictions, 'high_res_result.jpg')
+save_image(predictions, 'high_res_result.jpg', normalize=True)
