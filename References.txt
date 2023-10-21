@@ -1,0 +1,8 @@
+https://github.com/sgrvinod/Deep-Tutorials-for-PyTorch
+https://www.kaggle.com/code/balraj98/single-image-super-resolution-gan-srgan-pytorch/notebook
+https://www.kaggle.com/code/luizclaudioandrade/srgan-pytorch-lightning
+https://pytorch.org/tutorials/beginner/
+https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/GANs
+https://www.youtube.com/playlist?list=PLhhyoLH6IjfwIp8bZnzX8QR30TRcHO8Va
+https://paperswithcode.com/
+And some random medium articles !
