@@ -70,7 +70,7 @@ print('Model loaded successfully!')
 # Gradio Code starts here:
 # hr size = (256,256,3)
 # lr size = (64,64,3)
-def lr2hr(image, hr_height=256):
+def lr2hr(image):
     # input image - (-1, 3, 64, 64)
     # batch size, channels, height, width
     image = image.convert('RGB')
@@ -78,8 +78,9 @@ def lr2hr(image, hr_height=256):
     image = image.permute(2, 0, 1)
     image = image / 255.0
     predictions = generator(image.unsqueeze(0))
-    return predictions
+    save_image(predictions, 'output.jpg', normalize=True)
+    return 'output.jpg'
 
 interface = gr.Interface(fn=lr2hr, inputs=[gr.Image(type='pil')], outputs=gr.Image(type='pil'), 
 		title='SRGAN Implemntation')
-interface.launch(debug=True, share=True)
+interface.launch(debug=True, share=False) # Set share=True if you want to share this which others
