@@ -1,3 +1,4 @@
+import gradio as gr 
 import torch
 import torch.nn as nn
 import numpy as np
@@ -60,22 +61,29 @@ class GeneratorResNet(nn.Module):
         return out
     
 generator = GeneratorResNet()
+
 # change the map_location if you're GPU rich ;-)
-generator.load_state_dict(torch.load('generator.pth', map_location=torch.device('cpu')))
+generator.load_state_dict(torch.load('generatorfinal.pth', map_location=torch.device('cpu')))
+
 # https://stackoverflow.com/questions/60018578/what-does-model-eval-do-in-pytorch
 generator.eval() 
-# change the image path 
-image = Image.open('lr_imgs/002170.jpg')
-image = image.convert('RGB')
-image = torch.from_numpy(np.array(image, dtype=np.float32))
-image = image.permute(2, 0, 1)
-image = image / 255.0
 
-# Pass the preprocessed image to the model.
-predictions = generator(image.unsqueeze(0))
+def pytorch_predict(image): 
+    # change the image path 
+    # image = Image.open(img_path)
+    # image = image.convert('RGB')
+    image = torch.from_numpy(np.array(image, dtype=np.float32))
+    image = image.permute(2, 0, 1)
+    image = image / 255.0
+    # Pass the preprocessed image to the model.
+    predictions = generator(image.unsqueeze(0))
+    # print(predictions)
+    # print(predictions.size())
+    save_image(predictions, 'result.jpg', normalize=True)
+    return 'result.jpg'
 
-print(predictions)
-
-print(predictions.size())
-
-save_image(predictions, 'high_res_result.jpg', normalize=True)
+gr.Interface(
+    pytorch_predict,
+    inputs='image',
+    outputs='image',
+).launch()
