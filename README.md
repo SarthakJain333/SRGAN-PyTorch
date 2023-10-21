@@ -11,6 +11,7 @@ References :
 7. https://paperswithcode.com/
 
 Google Colab link for direct use of the notebook : https://tinyurl.com/tbp9tevr
+
 Concepts involved :
 Residual Connections, Generative Adversarial Networks(GANs), Perceptual Loss
 
